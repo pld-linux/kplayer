@@ -1,0 +1,13 @@
+--- kplayer-0.5.2/kplayer/kplayer.desktop~	Thu Nov 11 02:43:36 2004
++++ kplayer-0.5.2/kplayer/kplayer.desktop	Thu Nov 11 02:43:36 2004
+@@ -50,9 +50,8 @@
+ GenericName[tr]=Medya Yürütücüsü
+ GenericName[uk]=Програвач медіа-матеріалів
+ GenericName[uz]=Медиа плейер
+-GenericName[ven]=Tshitambi tsha Media
++GenericName[ve]=Tshitambi tsha Media
+ GenericName[xh]=Umdlali we Midia
+-GenericName[xx]=xxMedia Playerxx
+ GenericName[zh_CN]=媒体播放器
+ GenericName[zh_TW]=媒體播放器
+ GenericName[zu]=Umdlali Womculo
