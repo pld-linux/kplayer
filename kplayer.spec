@@ -6,13 +6,13 @@ Version:	0.3.1
 Release:	1
 License:	GPL
 Group:		X11/Applications/Multimedia
-Source0:	http://twtelecom.dl.sourceforge.net/sourceforge/%{name}/%{name}-%{version}.tar.bz2
+Source0:	http://dl.sourceforge.net/%{name}/%{name}-%{version}.tar.bz2
 # Source0-md5:	3fc9bb78b60f9d21e725feb71a9714b0
 URL:		http://sourceforge.net/projects/kplayer/
 BuildRequires:	kdelibs-devel >= 3.1
 BuildRequires:	mplayer
-Requires:	mplayer
 Requires:	kdelibs >= 3.1
+Requires:	mplayer
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_htmldir	/usr/share/doc/kde/HTML
@@ -37,9 +37,10 @@ kde_icondir="%{_pixmapsdir}"; export kde_icondir
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%{__make} install DESTDIR=$RPM_BUILD_ROOT
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
 
-%find_lang	%{name}		--with-kde
+%find_lang %{name} --with-kde
 
 %clean
 rm -rf $RPM_BUILD_ROOT
