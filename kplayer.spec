@@ -8,6 +8,7 @@ Group:		X11/Applications/Multimedia
 Source0:	http://dl.sourceforge.net/%{name}/%{name}-%{version}-src.tar.bz2
 # Source0-md5:	9a7eebb9aac656e070cf82eb959ff9bb
 URL:		http://sourceforge.net/projects/kplayer/
+BuildRequires:	automake
 BuildRequires:	kdelibs-devel >= 3.1
 Requires:	kdelibs >= 3.1
 Requires:	mplayer
@@ -25,6 +26,7 @@ KPlayer to odtwarzacz mediów dla KDE bazuj±cy na mplayerze.
 %setup -q
 
 %build
+cp -f /usr/share/automake/config.sub .
 kde_appsdir="%{_applnkdir}"; export kde_appsdir
 kde_htmldir="%{_htmldir}"; export kde_htmldir
 kde_icondir="%{_pixmapsdir}"; export kde_icondir
