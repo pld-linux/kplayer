@@ -23,7 +23,7 @@ KPlayer is a KDE media player based on mplayer.
 KPlayer to odtwarzacz mediów dla KDE bazuj±cy na mplayerze.
 
 %prep
-%setup -q 
+%setup -q
 
 %build
 kde_appsdir="%{_applnkdir}"; export kde_appsdir
