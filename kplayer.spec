@@ -7,7 +7,7 @@ License:	GPL
 Group:		X11/Applications/Multimedia
 Source0:	http://dl.sourceforge.net/%{name}/%{name}-%{version}-src.tar.bz2
 # Source0-md5:	9a7eebb9aac656e070cf82eb959ff9bb
-URL:		http://sourceforge.net/projects/kplayer/
+URL:		http://kplayer.sourceforge.net/	
 BuildRequires:	automake
 BuildRequires:	kdelibs-devel >= 3.1
 Requires:	kdelibs >= 3.1
