@@ -2,7 +2,7 @@ Summary:	KDE media player based on mplayer
 Summary(pl):	Odtwarzacz mediów dla KDE bazuj±cy na mplayerze
 Name:		kplayer
 Version:	0.5.3
-Release:	2
+Release:	3
 License:	GPL
 Group:		X11/Applications/Multimedia
 Source0:	http://dl.sourceforge.net/kplayer/%{name}-%{version}.tar.bz2
@@ -41,7 +41,7 @@ rm -rf $RPM_BUILD_ROOT
 	applnkdir=%{_desktopdir}
 
 # included in kdelibs
-rm -f $RPM_BUILD_ROOT%{_datadir}/services/{mms,rtsp}.protocol
+rm -f $RPM_BUILD_ROOT%{_datadir}/services/{mms,rtsp,pnm}.protocol
 
 %find_lang %{name} --with-kde
 
@@ -63,4 +63,6 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/services/kfile_kplayer.desktop
 %{_datadir}/services/mmst.protocol
 %{_datadir}/services/mmsu.protocol
-%{_datadir}/services/pnm.protocol
+
+# this file is on kdelibs
+# %%{_datadir}/services/pnm.protocol
