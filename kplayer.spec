@@ -10,7 +10,6 @@ Source0:	http://dl.sourceforge.net/%{name}/%{name}-%{version}.tar.bz2
 # Source0-md5:	3fc9bb78b60f9d21e725feb71a9714b0
 URL:		http://sourceforge.net/projects/kplayer/
 BuildRequires:	kdelibs-devel >= 3.1
-BuildRequires:	mplayer
 Requires:	kdelibs >= 3.1
 Requires:	mplayer
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -50,4 +49,4 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/kplayer
 %{_datadir}/apps/kplayer
 %{_applnkdir}/Multimedia/kplayer.desktop
-%{_pixmapsdir}/*
+%{_pixmapsdir}/*/*/apps/*.png
