@@ -14,8 +14,6 @@ Requires:	kdelibs >= 3.1
 Requires:	mplayer
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define		_htmldir	/usr/share/doc/kde/HTML
-
 %description
 KPlayer is a KDE media player based on mplayer.
 
@@ -26,12 +24,8 @@ KPlayer to odtwarzacz mediów dla KDE bazuj±cy na mplayerze.
 %setup -q
 
 %build
-cp -f /usr/share/automake/config.sub .
-cp -f /usr/share/automake/config.sub admin/
-kde_appsdir="%{_applnkdir}"; export kde_appsdir
-kde_htmldir="%{_htmldir}"; export kde_htmldir
-kde_icondir="%{_pixmapsdir}"; export kde_icondir
-
+cp -f /usr/share/automake/config.sub admin
+kde_htmldir="%{_kdedocdir}"; export kde_htmldir
 %configure
 %{__make}
 
@@ -50,11 +44,10 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/kplayer
 %{_datadir}/apps/kplayer
-%{_applnkdir}/Multimedia/kplayer.desktop
-%{_pixmapsdir}/*/*/apps/*.png
+%{_desktopdir}/kplayer.desktop
+%{_iconsdir}/*/*/apps/*.png
 %{_libdir}/kde3/kfile_kplayer.la
-%{_libdir}/kde3/kfile_kplayer.so
+%attr(755,root,root) %{_libdir}/kde3/kfile_kplayer.so
 %{_libdir}/kde3/libkplayerpart.la
-%{_libdir}/kde3/libkplayerpart.so
-%{_datadir}//services/kplayerpart.desktop
-#%{_datadir}/services/*
+%attr(755,root,root) %{_libdir}/kde3/libkplayerpart.so
+%{_datadir}/services/kplayerpart.desktop
