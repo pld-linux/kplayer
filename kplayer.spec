@@ -7,6 +7,7 @@ Release:	1
 License:	GPL
 Group:		X11/Applications/Multimedia
 Source0:	http://heanet.dl.sourceforge.net/sourceforge/kplayer/%{name}-%{version}-src.tar.gz
+# Source0-md5: b8b3cb95a7379c2de60a586e67f1a9d5
 URL:		http://sourceforge.net/projects/kplayer/
 BuildRequires:	kdelibs-devel >= 3.1
 BuildRequires:	mplayer
