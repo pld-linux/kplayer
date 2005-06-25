@@ -58,7 +58,6 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/apps/kplayer
 %{_desktopdir}/kplayer.desktop
 %{_iconsdir}/hicolor/*/apps/*.png
-%{_iconsdir}/locolor/*/apps/*.png
 %{_datadir}/services/kplayerpart.desktop
 %{_datadir}/services/kfile_kplayer.desktop
 #%%{_datadir}/services/mmst.protocol
