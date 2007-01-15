@@ -61,5 +61,6 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/kde3/libkplayerpart.so
 %{_datadir}/apps/kplayer
 %{_datadir}/services/kplayerpart.desktop
-#%{_desktopdir}/kplayer.desktop
 %{_iconsdir}/hicolor/*/apps/*.png
+%{_desktopdir}/kde/kplayer.desktop
+%{_datadir}/apps/konqueror/servicemenus/kplayer-*.desktop
