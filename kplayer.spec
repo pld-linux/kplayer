@@ -10,7 +10,9 @@ Source0:	http://dl.sourceforge.net/kplayer/%{name}-%{version}.tar.bz2
 Patch0:		%{name}-desktop.patch
 Patch1:		%{name}-am110.patch
 URL:		http://kplayer.sourceforge.net/
+BuildRequires:	autoconf
 BuildRequires:	automake
+BuildRequires:	gettext-devel
 BuildRequires:	kdelibs-devel >= 9:3.3
 BuildRequires:	rpmbuild(macros) >= 1.129
 Requires:	mplayer
@@ -29,7 +31,6 @@ KPlayer to odtwarzacz mediów dla KDE bazuj±cy na mplayerze.
 
 %build
 cp -f /usr/share/automake/config.sub admin
-kde_htmldir="%{_kdedocdir}"; export kde_htmldir
 %{__make} -f admin/Makefile.common cvs
 %configure \
 %if "%{_lib}" == "lib64"
@@ -44,10 +45,8 @@ rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT \
-	applnkdir=%{_desktopdir}
-
-# included in kdelibs
-rm -f $RPM_BUILD_ROOT%{_datadir}/services/{mms,rtsp,pnm,mmst,mmsu}.protocol
+	applnkdir=%{_desktopdir} \
+	kde_htmldir=%{_kdedocdir}
 
 %find_lang %{name} --with-kde
 
