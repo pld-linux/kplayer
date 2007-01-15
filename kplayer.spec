@@ -1,13 +1,14 @@
 Summary:	KDE media player based on mplayer
 Summary(pl):	Odtwarzacz mediów dla KDE bazuj±cy na mplayerze
 Name:		kplayer
-Version:	0.5.3
-Release:	5
+Version:	0.6.0
+Release:	1
 License:	GPL
 Group:		X11/Applications/Multimedia
 Source0:	http://dl.sourceforge.net/kplayer/%{name}-%{version}.tar.bz2
-# Source0-md5:	ea7398f96efa2f01ac875c548ab01878
+# Source0-md5:	c04b7a2a8c5d169d6c7c9c445da7c837
 Patch0:		%{name}-desktop.patch
+Patch1:		%{name}-am110.patch
 URL:		http://kplayer.sourceforge.net/
 BuildRequires:	automake
 BuildRequires:	kdelibs-devel >= 9:3.3
@@ -24,10 +25,12 @@ KPlayer to odtwarzacz mediów dla KDE bazuj±cy na mplayerze.
 %prep
 %setup -q
 %patch0 -p1
+%patch1 -p0
 
 %build
 cp -f /usr/share/automake/config.sub admin
 kde_htmldir="%{_kdedocdir}"; export kde_htmldir
+%{__make} -f admin/Makefile.common cvs
 %configure \
 	--with-qt-libraries=%{_libdir}
 %{__make}
