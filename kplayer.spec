@@ -57,12 +57,9 @@ rm -rf $RPM_BUILD_ROOT
 %files -f %{name}.lang
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/kplayer
-%{_libdir}/kde3/kfile_kplayer.la
-%attr(755,root,root) %{_libdir}/kde3/kfile_kplayer.so
 %{_libdir}/kde3/libkplayerpart.la
 %attr(755,root,root) %{_libdir}/kde3/libkplayerpart.so
 %{_datadir}/apps/kplayer
 %{_datadir}/services/kplayerpart.desktop
-%{_datadir}/services/kfile_kplayer.desktop
-%{_desktopdir}/kplayer.desktop
+#%{_desktopdir}/kplayer.desktop
 %{_iconsdir}/hicolor/*/apps/*.png
