@@ -10,9 +10,8 @@ Source0:	http://dl.sourceforge.net/kplayer/%{name}-%{version}.tar.bz2
 Patch0:		%{name}-desktop.patch
 URL:		http://kplayer.sourceforge.net/
 BuildRequires:	automake
-BuildRequires:	kdelibs-devel >= 3.1
+BuildRequires:	kdelibs-devel >= 9:3.3
 BuildRequires:	rpmbuild(macros) >= 1.129
-Requires:	kdelibs >= 9:3.3.0-2
 Requires:	mplayer
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
