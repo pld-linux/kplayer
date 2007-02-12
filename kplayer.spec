@@ -1,5 +1,5 @@
 Summary:	KDE media player based on mplayer
-Summary(pl):	Odtwarzacz mediów dla KDE bazuj±cy na mplayerze
+Summary(pl.UTF-8):   Odtwarzacz mediÃ³w dla KDE bazujÄ…cy na mplayerze
 Name:		kplayer
 Version:	0.6.0
 Release:	1
@@ -21,8 +21,8 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 KPlayer is a KDE media player based on mplayer.
 
-%description -l pl
-KPlayer to odtwarzacz mediów dla KDE bazuj±cy na mplayerze.
+%description -l pl.UTF-8
+KPlayer to odtwarzacz mediÃ³w dla KDE bazujÄ…cy na mplayerze.
 
 %prep
 %setup -q
