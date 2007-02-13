@@ -1,5 +1,5 @@
 Summary:	KDE media player based on mplayer
-Summary(pl.UTF-8):   Odtwarzacz mediów dla KDE bazujący na mplayerze
+Summary(pl.UTF-8):	Odtwarzacz mediów dla KDE bazujący na mplayerze
 Name:		kplayer
 Version:	0.6.0
 Release:	1
