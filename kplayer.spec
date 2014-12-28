@@ -11,7 +11,7 @@ Patch0:		%{name}-desktop.patch
 URL:		http://kplayer.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	gettext-devel
+BuildRequires:	gettext-tools
 BuildRequires:	kdelibs-devel >= 9:3.3
 BuildRequires:	rpmbuild(macros) >= 1.129
 Requires:	mplayer
